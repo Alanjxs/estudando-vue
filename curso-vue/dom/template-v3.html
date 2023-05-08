@@ -1,0 +1,22 @@
+<!-- Incluindo o Vue.js -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{ titulo }}</p>
+    <p>{{ tituloFuncao() }}</p>
+</div>
+
+<script>
+    new Vue({
+        el:'#app',
+        data: {
+            titulo: 'Usando VueJS!'
+        },
+        methods: {
+            tituloFuncao: function(){
+                console.log(this)
+                return 'Título Função: ' + this.titulo
+            }
+        }
+    })
+</script>
